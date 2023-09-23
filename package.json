@@ -1,0 +1,31 @@
+{
+  "name": "getaddressinfo",
+  "version": "1.0.0",
+  "description": "NodeJS-Lambda function to fetch Geocode, Suburb and StateElectoral information based on Geocoded Address",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "address",
+    "suburb",
+    "stateElectoral"
+  ],
+  "author": "Annette McArdle",
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.1463.0",
+    "eslint": "^8.50.0",
+    "expect": "^29.7.0",
+    "mocha": "^10.2.0",
+    "rewire": "7.0.0",
+    "sinon": "^16.0.0",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "axios": "^1.5.0"
+  }
+}
