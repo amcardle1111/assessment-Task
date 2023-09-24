@@ -55,7 +55,6 @@ exports.handler = function (event, context, callback) {
 	console.log("Request: ", config.url, "where=",config.params.where);
 	axios.request(config)
 		.then((response) => {
-
 			if (response.data.features.length > 0) {
 				toReturn.data.address = response.data.features[0].properties.address;
 				toReturn.data.location.push(response.data.features[0].geometry.coordinates[0]);
@@ -119,7 +118,6 @@ exports.handler = function (event, context, callback) {
 				console.log("Request: ", config3.url, "geometry=",config3.params.geometry, "outFields: ", config3.params.outFields);
 				let promise3 = axios.request(config3)
 					.then((response3) => {
-
 						if (response3.data.features.length > 0) {
 							toReturn.data.suburbName = response3.data.features[0].properties.suburbname;
 						}

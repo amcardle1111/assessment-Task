@@ -33,5 +33,7 @@ Install: npm install
   
 ## Run Tests  
   
-Run local integration test: node test/local.js  
+Run local integration test. several examples of events available: node test/local.js  
 Run eslint: npm run pretest
+Run Unit Tests with eslint (reduced logging): npm run test
+Run Unit Tests with full logging: npm run debug

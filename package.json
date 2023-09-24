@@ -4,7 +4,9 @@
   "description": "NodeJS-Lambda function to fetch Geocode, Suburb and StateElectoral information based on Geocoded Address",
   "main": "index.js",
   "scripts": {
-    "pretest": "eslint ./*.js ./test/*.js"
+    "pretest": "eslint ./*.js ./test/*.js",
+    "test": "nyc --check-coverage --statements 80 --branches 80 --lines 80 mocha **/*.test.js",
+		"debug": "NODE_ENV=debug npm run-script test"
   },
   "keywords": [
     "address",
@@ -14,7 +16,12 @@
   "author": "Annette McArdle",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.50.0"
+    "eslint": "^8.50.0",
+    "expect": "^1.20.2",
+		"mocha": "^10.2.0",
+		"rewire": "^7.0.0",
+		"sinon": "^16.0.0",
+		"nyc": "^15.1.0"
   },
   "dependencies": {
     "axios": "^1.5.0"
